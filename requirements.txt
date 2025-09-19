@@ -1,0 +1,10 @@
+# VictorUno Dependencies
+# Core package has no external dependencies
+# For development, install with: pip install -e .[dev]
+
+# Development dependencies (optional)
+# pytest>=6.0
+# pytest-cov
+# black
+# flake8
+# mypy
