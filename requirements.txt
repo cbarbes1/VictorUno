@@ -16,3 +16,4 @@ langchain-ollama
 pydantic
 uvicorn
 fastapi
+pyowm
