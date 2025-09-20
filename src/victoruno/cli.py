@@ -19,7 +19,7 @@ def main():
     )
     parser.add_argument(
         "command",
-        choices=["research", "develop", "optimize", "info"],
+        choices=["research", "develop", "optimize", "info", "weather"],
         help="Command to execute"
     )
     parser.add_argument(
@@ -32,11 +32,21 @@ def main():
         default="VictorUno",
         help="Name for the agent instance"
     )
+    parser.add_argument(
+        "--mode",
+        default="local",
+        help="Choose local or cloud"
+    )
+    parser.add_argument(
+        "--model",
+        default="gemma3:latest",
+        help="Name for the agent instance"
+    )
     
     args = parser.parse_args()
     
     # Initialize the agent
-    agent = VictorUno(name=args.name)
+    agent = VictorUno(name=args.name, mode=args.mode, model=args.model)
     
     # Execute the command
     if args.command == "info":
@@ -55,6 +65,8 @@ def main():
             result = agent.develop(args.target)
         elif args.command == "optimize":
             result = agent.optimize(args.target)
+        elif args.command == "weather":
+            result = agent.weather(args.target)
         
         print(result)
 

@@ -3,8 +3,16 @@
 # For development, install with: pip install -e .[dev]
 
 # Development dependencies (optional)
-# pytest>=6.0
-# pytest-cov
-# black
-# flake8
-# mypy
+pytest>=6.0
+pytest-cov
+black
+flake8
+mypy
+
+langgraph
+langchain-core
+langchain-community
+langchain-ollama
+pydantic
+uvicorn
+fastapi
