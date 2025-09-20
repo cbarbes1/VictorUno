@@ -31,6 +31,7 @@ dependencies = [
     "langchain-community",
     "langchain-ollama",
     "pydantic",
+    "pyowm",
 ]
 
 [project.optional-dependencies]
